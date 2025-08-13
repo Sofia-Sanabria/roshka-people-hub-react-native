@@ -1,28 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React from 'react';
+import { SafeAreaView } from 'react-native';
+import { PaperProvider } from 'react-native-paper';
+import { LoginScreen } from './src/presentation/screens/LoginScreen';
+import IonIcon from 'react-native-vector-icons/Ionicons';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+export const App = () => {
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <PaperProvider
+      settings={{
+        icon: (props) => <IonIcon {...props} />,
+      }}>
+      <SafeAreaView testID="app-container" style={{ flex: 1 }}>
+        <LoginScreen />
+      </SafeAreaView>
+    </PaperProvider>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
-
-export default App;
+};

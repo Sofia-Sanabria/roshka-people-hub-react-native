@@ -1,0 +1,36 @@
+import React from 'react';
+import { Platform, Pressable, StyleSheet, Text } from 'react-native';
+
+interface Props {
+  label: string;
+  onPress?: () => void;
+  onLongPress?: () => void;
+}
+
+export const PrimaryButton = ({ label, onPress }: Props) => {
+  return (
+    <Pressable
+      // Si onPress existe, entonces se ejecuta la funcion onPress()
+      onPress={() => onPress && onPress()}
+      style={({ pressed }) => [styles.button, pressed && styles.buttonPressed]}>
+      <Text
+        style={{
+          color: Platform.OS === 'android' ? 'white' : '#2b5094',
+        }}>
+        {label}
+      </Text>
+    </Pressable>
+  );
+};
+
+const styles = StyleSheet.create({
+  button: {
+    backgroundColor: Platform.OS === 'android' ? '#1C4289' : 'white',
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+    borderRadius: 10,
+  },
+  buttonPressed: {
+    backgroundColor: Platform.OS === 'android' ? '#2b5094' : 'white',
+  },
+});

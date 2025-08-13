@@ -1,13 +1,15 @@
-/**
- * @format
- */
-
 import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
-import App from '../App';
+import { render } from '@testing-library/react-native';
+import { App } from '../App';
 
-test('renders correctly', async () => {
-  await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
+describe('App', () => {
+  it('renderiza el contenedor principal', () => {
+    const { getByTestId } = render(<App />);
+    expect(getByTestId('app-container')).toBeVisible();
+  });
+
+  it('muestra el título de LoginScreen', () => {
+    const { getByText } = render(<App />);
+    expect(getByText('LOGIN')).toBeVisible();
   });
 });
