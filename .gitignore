@@ -2,6 +2,15 @@
 #
 .DS_Store
 
+# Archivos y carpetas ocultos
+.bundle/
+android/
+ios/
+.watchmanconfig
+Gemfile
+Gemfile.lock
+app.json
+
 # Xcode
 #
 build/
