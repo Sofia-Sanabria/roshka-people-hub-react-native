@@ -56,8 +56,5 @@
   },
   "engines": {
     "node": ">=18"
-  },
-  "commitlint":{
-    "config": "./commitlint.config.cjs"
   }
 }
