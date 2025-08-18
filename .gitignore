@@ -10,10 +10,6 @@ ios/
 Gemfile
 Gemfile.lock
 app.json
-babel.config.js
-jest.setup.js
-metro.config.js
-package-lock.json
 
 # Xcode
 #
