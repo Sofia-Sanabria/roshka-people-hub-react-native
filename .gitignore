@@ -7,7 +7,6 @@
 .watchmanconfig
 Gemfile
 Gemfile.lock
-app.json
 
 # Xcode
 #
