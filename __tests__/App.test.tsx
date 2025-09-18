@@ -10,6 +10,6 @@ describe('App', () => {
 
   it('muestra el título de LoginScreen', () => {
     const { getByText } = render(<App />);
-    expect(getByText('LOGIN')).toBeVisible();
+    expect(getByText('Welcome to Nativewind!')).toBeVisible();
   });
 });
