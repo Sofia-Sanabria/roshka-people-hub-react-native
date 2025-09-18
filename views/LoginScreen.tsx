@@ -1,21 +1,13 @@
 import React from 'react';
-import { View } from 'react-native';
-import {
-  Box,
-  Heading,
-  Input,
-  InputField,
-} from '@gluestack-ui/themed';
+import { View, Text} from 'react-native';
 
 export const LoginScreen = () => {
   return (
-    <Box>
-      <View>
-        <Heading>LOGIN</Heading>
-        <Input>
-          <InputField placeholder="AtomCore" />
-        </Input>
-      </View>
-    </Box>
-  );
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-xl font-bold text-blue-500">
+        Welcome to Nativewind!
+      </Text>
+    </View>
+  )
+
 };

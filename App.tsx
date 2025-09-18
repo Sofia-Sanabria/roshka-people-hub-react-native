@@ -1,7 +1,7 @@
 import 'react-native-gesture-handler';
+import "./global.css"
 import * as React from 'react';
 import { View } from 'react-native';
-import { GluestackUIProvider } from './components/ui/gluestack-ui-provider';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';

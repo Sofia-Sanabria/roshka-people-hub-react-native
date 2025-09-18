@@ -12,7 +12,6 @@ const config: Config = {
       + '|@react-native'
       + '|react-clone-referenced-element'
       + '|@react-navigation'
-      + '|@gluestack-ui'
       + '|@react-native-aria'
       + '|react-native-aria'
       + '|nativewind'
