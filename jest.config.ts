@@ -17,6 +17,7 @@ const config: Config = {
       + '|nativewind'
       + '|react-native-css-interop'
       + '|react-native-gesture-handler'
+      + 'react-native-vector-icons|' +
       + '|react-native-reanimated'
       + '|react-native-svg'
       + '|@expo/html-elements'
@@ -25,13 +26,9 @@ const config: Config = {
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/__mocks__/fileMock.js',
     '\\.css$': '<rootDir>/__mocks__/styleMock.js',
-
-    '^@react-aria/utils$': '@react-native-aria/utils',
-    '^@react-aria/utils/(.*)$': '@react-native-aria/utils/$1',
-    '^@react-aria/visually-hidden$': '<rootDir>/shims/react-aria/visually-hidden.native.tsx',
-    '^@react-aria/visually-hidden/(.*)$': '<rootDir>/shims/react-aria/visually-hidden.native.tsx',
-
+    '\\.(svg)$': '<rootDir>/__mocks__/svgMock.js',
   },
+
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };
 
