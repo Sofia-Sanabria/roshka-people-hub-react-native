@@ -10,6 +10,7 @@ const isJest = typeof process !== 'undefined' && process.env.JEST_WORKER_ID !== 
 let Stack: any;
 let LoginScreen: any;
 let RegisterScreen: any;
+let HomeScreen: any;
 
 if (!isJest) {
   require('react-native-gesture-handler');
@@ -21,6 +22,7 @@ if (!isJest) {
     // Cargar pantallas reales SOLO fuera de Jest
     LoginScreen = require("./views/LoginScreen").LoginScreen;
     RegisterScreen = require("./views/RegisterScreen").RegisterScreen;
+    HomeScreen = require("./views/HomeScreen").HomeScreen;
 
 } else {
     // Stubs mínimos para que el árbol renderice en tests sin traer dependencias nativas
@@ -57,6 +59,14 @@ export const App = () => {
             component={RegisterScreen}
             options={{
               title: "Registrarse",
+            }}
+          />
+
+          <Stack.Screen
+            name="Home"
+            component={HomeScreen}
+            options={{
+              title: "Home",
             }}
           />
         </Stack.Navigator>
