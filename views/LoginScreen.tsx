@@ -11,7 +11,6 @@ import {
   View,
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import RoshkaLogo from '../assets/roshka-logo.svg';
 import { FontAwesome6 } from '@react-native-vector-icons/fontawesome6';
 
 const PRIMARY = "#26397E"; // AzulBarra
@@ -25,8 +24,7 @@ export const LoginScreen = () => {
   const [passVisible, setPassVisible] = useState(false);
 
   const handleLogin = () => {
-    // TODO: integrar con tu auth
-    // navigation.navigate("Home");
+    navigation.navigate("Home");
   };
 
   return (
@@ -43,8 +41,8 @@ export const LoginScreen = () => {
           <View className="h-36" />
 
           {/* Logo */}
-          <View className="px-6 pt-8 pb-4">
-            <RoshkaLogo width="100%" height={80} />
+          <View className="px-10 pt-8 pb-4">
+            <Image source={require('../assets/roshka-logo.png')} style={{ width: '100%', height: 83 }} />
           </View>
 
           <View className="h-20" />
