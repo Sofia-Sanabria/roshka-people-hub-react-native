@@ -20,9 +20,9 @@ if (!isJest) {
     Stack = createStackNavigator();
 
     // Cargar pantallas reales SOLO fuera de Jest
-    LoginScreen = require("./views/LoginScreen").LoginScreen;
-    RegisterScreen = require("./views/RegisterScreen").RegisterScreen;
-    HomeScreen = require("./views/HomeScreen").HomeScreen;
+    LoginScreen = require("./src/screens/LoginScreen").LoginScreen;
+    RegisterScreen = require("./src/screens/RegisterScreen").RegisterScreen;
+    HomeScreen = require("./src/screens/HomeScreen").HomeScreen;
 
 } else {
     // Stubs mínimos para que el árbol renderice en tests sin traer dependencias nativas
