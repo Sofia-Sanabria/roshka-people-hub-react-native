@@ -39,8 +39,8 @@ export const LoginScreen = () => {
           {/* Logo */}
           <View className="px-10 pt-8 pb-4">
             <Image
-              source={require("../../assets/roshka-logo.png")}
-              style={{ width: "100%", height: 83 }}
+              source={require("../../../assets/roshka-logo.png")}
+              style={{ width: "100%", height: 75 }}
               resizeMode="contain"
             />
           </View>
