@@ -8,23 +8,31 @@ import {
 } from "react-native";
 import { PRIMARY, BORDER, AMARILLO } from "../../utils/theme/colors";
 import { HeaderBar, StatRow, TileButton } from "../../utils/components";
+import { useNavigation } from "@react-navigation/native";
 
 export const HomeScreen = () => {
+
+  const navigation = useNavigation<any>();
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       {/* HEADER */}
-      <HeaderBar onMenu={() => {}} onLogout={() => {}} />
+      <HeaderBar 
+        onMenu={() => navigation.openDrawer()} 
+        onLogout={() => navigation.navigate("Login")} 
+      />
 
       <ScrollView
         className="flex-1"
-        contentContainerStyle={{ padding: 30, paddingBottom: 30 }}
+        contentContainerStyle={{ padding: 40, paddingTop: 10 }}
         keyboardShouldPersistTaps="handled"
       >
         {/* Logo */}
-        <View>
+        <View className="px-10 pt-4 pb-4">
           <Image
-            source={require("../../assets/roshka-logo.png")}
-            style={{ width: "100%", height: 85 }}
+            source={require("../../../assets/roshka-logo.png")}
+            style={{ width: "100%", height: 75 }}
+            resizeMode="contain"
           />
         </View>
 

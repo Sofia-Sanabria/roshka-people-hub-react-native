@@ -1,35 +1,21 @@
-import "./global.css"
-import * as React from 'react';
-import { StatusBar, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-
+import "./global.css";
+import * as React from "react";
+import { StatusBar, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { StackNavigator} from "./src/navigation/StackNavigator";
 // Detecta Jest
-const isJest = typeof process !== 'undefined' && process.env.JEST_WORKER_ID !== undefined;
+const isJest =
+  typeof process !== "undefined" && process.env.JEST_WORKER_ID !== undefined;
 
-// En Jest, evitamos imports que disparan RNGH/Stack y usamos stubs.
-let Stack: any;
-let LoginScreen: any;
-let RegisterScreen: any;
-let HomeScreen: any;
+// Stubs mínimos para Jest
+let AppNavigator: any;
 
 if (!isJest) {
-  require('react-native-gesture-handler');
-
-    // Cargar el stack navigator SOLO fuera de Jest
-    const { createStackNavigator } = require("@react-navigation/stack");
-    Stack = createStackNavigator();
-
-    // Cargar pantallas reales SOLO fuera de Jest
-    LoginScreen = require("./src/screens/LoginScreen").LoginScreen;
-    RegisterScreen = require("./src/screens/RegisterScreen").RegisterScreen;
-    HomeScreen = require("./src/screens/HomeScreen").HomeScreen;
-
+  require("react-native-gesture-handler");
+  AppNavigator = StackNavigator;
 } else {
-    // Stubs mínimos para que el árbol renderice en tests sin traer dependencias nativas
-    Stack = {
-      Navigator: ({ children }: any) => <>{children}</>,
-      Screen: (_props: any) => null,
-    };
+  // En tests, devolvemos un stub plano para evitar dependencias nativas
+  AppNavigator = () => null;
 }
 
 export const App = () => {
@@ -37,41 +23,8 @@ export const App = () => {
     <View testID="app-container" style={{ flex: 1 }}>
       <StatusBar barStyle="dark-content" backgroundColor="#FFFFFF" />
       <NavigationContainer>
-        <Stack.Navigator 
-          initialRouteName="Login"
-          screenOptions={{
-            headerShown: false,
-            animation: isJest ? 'none' : 'default',
-
-          }}
-        >
-          <Stack.Screen
-            name="Login"
-            component={LoginScreen}
-            options={{
-              title: "Iniciar Sesión",
-              headerShown: false
-            }}
-          />
-
-          <Stack.Screen
-            name="Registrarse"
-            component={RegisterScreen}
-            options={{
-              title: "Registrarse",
-            }}
-          />
-
-          <Stack.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{
-              title: "Home",
-            }}
-          />
-        </Stack.Navigator>
+        <AppNavigator />
       </NavigationContainer>
-      
     </View>
   );
 };
