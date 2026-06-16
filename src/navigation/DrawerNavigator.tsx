@@ -8,9 +8,10 @@ import { useNavigation } from "@react-navigation/native";
 import { CommonActions } from "@react-navigation/native";
 
 const Drawer = createDrawerNavigator();
-const navigation = useNavigation();
 
 function CustomDrawerContent(props: any) {
+  const navigation = useNavigation();
+
   return (
     <DrawerContentScrollView
       {...props}
