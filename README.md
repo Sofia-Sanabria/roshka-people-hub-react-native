@@ -1,97 +1,142 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Roshka People Hub
 
-# Getting Started
+Roshka People Hub is an internal mobile application built with **React Native** and **TypeScript**.
+The app centralizes employee access to profile information, HR-related requests and corporate benefits in a mobile-first experience aligned with Roshka’s visual identity.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## Overview
 
-## Step 1: Start Metro
+This project was created as a mobile solution for internal people management processes. It allows employees to access key information and manage different types of work-related requests from a single application.
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+The application includes flows related to employee registration, authentication, profile access, request management and navigation through different internal services such as vacations, medical leaves, licenses, corporate benefits and loans.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Main Features
 
-```sh
-# Using npm
+* Employee authentication flow
+* Employee registration flow
+* User profile and personal information access
+* HR request management
+* Vacation, leave and license-related sections
+* Corporate benefits and loan-related sections
+* Drawer navigation
+* Reusable mobile components
+* UI adapted to Roshka’s visual identity
+* Cross-platform structure for Android and iOS
+
+## Tech Stack
+
+* React Native
+* TypeScript
+* JavaScript
+* Android
+* iOS
+* Kotlin
+* Swift
+* Ruby / CocoaPods
+* CSS
+
+## Project Focus
+
+This repository highlights practical experience in mobile development, including:
+
+* Building mobile screens and flows with React Native
+* Working with TypeScript in a mobile environment
+* Implementing navigation structures
+* Creating reusable components
+* Organizing mobile app features
+* Preparing the project for Android and iOS environments
+* Working with native mobile tooling when needed
+
+## Getting Started
+
+Before running the project, make sure your React Native environment is properly configured.
+
+You can follow the official React Native environment setup guide:
+
+https://reactnative.dev/docs/environment-setup
+
+## Install Dependencies
+
+From the project root, install the dependencies:
+
+```bash
+npm install
+```
+
+or:
+
+```bash
+yarn install
+```
+
+## Start Metro
+
+Start the Metro development server:
+
+```bash
 npm start
+```
 
-# OR using Yarn
+or:
+
+```bash
 yarn start
 ```
 
-## Step 2: Build and run your app
+## Run on Android
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+With Metro running, open a new terminal and run:
 
-### Android
-
-```sh
-# Using npm
+```bash
 npm run android
+```
 
-# OR using Yarn
+or:
+
+```bash
 yarn android
 ```
 
-### iOS
+You can also run the project directly from **Android Studio**.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## Run on iOS
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+For iOS, install CocoaPods dependencies before running the app.
 
-```sh
+First, install Ruby dependencies if needed:
+
+```bash
 bundle install
 ```
 
-Then, and every time you update your native dependencies, run:
+Then install CocoaPods dependencies:
 
-```sh
+```bash
 bundle exec pod install
 ```
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+After that, run the app:
 
-```sh
-# Using npm
+```bash
 npm run ios
+```
 
-# OR using Yarn
+or:
+
+```bash
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+You can also run the project directly from **Xcode**.
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## Development Notes
 
-## Step 3: Modify your app
+This project was developed as part of a mobile application workflow focused on internal corporate processes.
+It includes practical implementation of mobile UI, navigation, feature organization and platform-specific setup for Android and iOS.
 
-Now that you have successfully run the app, let's make changes!
+## Author
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+**Sofia Sanabria**
+Mobile Developer from Paraguay
+React Native | TypeScript | iOS | Android | AI-assisted Development
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+GitHub: [Sofia-Sanabria](https://github.com/Sofia-Sanabria)
