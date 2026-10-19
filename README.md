@@ -1,142 +1,44 @@
 # Roshka People Hub
 
-Roshka People Hub is an internal mobile application built with **React Native** and **TypeScript**.
-The app centralizes employee access to profile information, HR-related requests and corporate benefits in a mobile-first experience aligned with Roshka’s visual identity.
+Aplicación móvil interna desarrollada con **React Native y TypeScript** para centralizar la información de empleados, las solicitudes de Recursos Humanos y los beneficios corporativos.
 
-## Overview
+## Funcionalidades
 
-This project was created as a mobile solution for internal people management processes. It allows employees to access key information and manage different types of work-related requests from a single application.
+- Registro y autenticación de empleados.
+- Consulta del perfil y la información personal.
+- Gestión de solicitudes de vacaciones, reposos médicos y permisos.
+- Acceso a beneficios corporativos y préstamos.
+- Navegación mediante menú lateral.
+- Interfaz alineada con la identidad visual de Roshka.
 
-The application includes flows related to employee registration, authentication, profile access, request management and navigation through different internal services such as vacations, medical leaves, licenses, corporate benefits and loans.
+## Experiencia aplicada
 
-## Main Features
+En este proyecto implementé pantallas y flujos de usuario con React Native y TypeScript, desarrollé componentes reutilizables y organicé la navegación y las funcionalidades de la aplicación. También trabajé en la configuración del proyecto para Android e iOS utilizando herramientas de desarrollo nativo.
 
-* Employee authentication flow
-* Employee registration flow
-* User profile and personal information access
-* HR request management
-* Vacation, leave and license-related sections
-* Corporate benefits and loan-related sections
-* Drawer navigation
-* Reusable mobile components
-* UI adapted to Roshka’s visual identity
-* Cross-platform structure for Android and iOS
+## Tecnologías
 
-## Tech Stack
+**Desarrollo:** React Native, TypeScript y JavaScript.  
+**Plataformas y herramientas:** Android, iOS, Android Studio, Xcode y CocoaPods.
 
-* React Native
-* TypeScript
-* JavaScript
-* Android
-* iOS
-* Kotlin
-* Swift
-* Ruby / CocoaPods
-* CSS
+## Ejecución
 
-## Project Focus
-
-This repository highlights practical experience in mobile development, including:
-
-* Building mobile screens and flows with React Native
-* Working with TypeScript in a mobile environment
-* Implementing navigation structures
-* Creating reusable components
-* Organizing mobile app features
-* Preparing the project for Android and iOS environments
-* Working with native mobile tooling when needed
-
-## Getting Started
-
-Before running the project, make sure your React Native environment is properly configured.
-
-You can follow the official React Native environment setup guide:
-
-https://reactnative.dev/docs/environment-setup
-
-## Install Dependencies
-
-From the project root, install the dependencies:
+Instalá las dependencias e iniciá Metro:
 
 ```bash
 npm install
-```
-
-or:
-
-```bash
-yarn install
-```
-
-## Start Metro
-
-Start the Metro development server:
-
-```bash
 npm start
 ```
 
-or:
-
-```bash
-yarn start
-```
-
-## Run on Android
-
-With Metro running, open a new terminal and run:
+En otra terminal, ejecutá la plataforma correspondiente:
 
 ```bash
 npm run android
-```
-
-or:
-
-```bash
-yarn android
-```
-
-You can also run the project directly from **Android Studio**.
-
-## Run on iOS
-
-For iOS, install CocoaPods dependencies before running the app.
-
-First, install Ruby dependencies if needed:
-
-```bash
-bundle install
-```
-
-Then install CocoaPods dependencies:
-
-```bash
-bundle exec pod install
-```
-
-After that, run the app:
-
-```bash
+# o
 npm run ios
 ```
 
-or:
+Para iOS, configurá previamente las dependencias de CocoaPods.
 
-```bash
-yarn ios
-```
+## Autora
 
-You can also run the project directly from **Xcode**.
-
-## Development Notes
-
-This project was developed as part of a mobile application workflow focused on internal corporate processes.
-It includes practical implementation of mobile UI, navigation, feature organization and platform-specific setup for Android and iOS.
-
-## Author
-
-**Sofia Sanabria**
-Mobile Developer from Paraguay
-React Native | TypeScript | iOS | Android | AI-assisted Development
-
-GitHub: [Sofia-Sanabria](https://github.com/Sofia-Sanabria)
+**Sofia Sanabria** · Desarrolladora móvil  
